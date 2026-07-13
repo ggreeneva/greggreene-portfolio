@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greg Greene — Editorial &amp; Communications Strategist</title>
+<meta name="description" content="Portfolio of Greg Greene: institutional voice, persuasion, and editorial standards work across two decades.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F5F0;
+    --ink: #1C1A17;
+    --ink-soft: #4A453E;
+    --rule: #D8D3C8;
+    --editorial-red: #B23A2E;
+    --editorial-red-soft: #C9584D;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.6;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    padding: 96px 0 64px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--editorial-red);
+    margin-bottom: 18px;
+    display: block;
+  }
+
+  h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(2.4rem, 6vw, 3.6rem);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 22px;
+  }
+
+  header p.lede {
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    max-width: 56ch;
+    line-height: 1.55;
+  }
+
+  header p.lede + p.lede {
+    margin-top: 14px;
+  }
+
+  .contact-row {
+    margin-top: 32px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--ink-soft);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+  }
+
+  .contact-row a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid var(--rule); }
+  .contact-row a:hover { color: var(--editorial-red); border-color: var(--editorial-red); }
+
+  /* ---------- Intro note ---------- */
+  .intro-note {
+    padding: 56px 0 8px;
+    max-width: 60ch;
+  }
+
+  .intro-note p {
+    color: var(--ink-soft);
+    font-size: 1rem;
+  }
+
+  .intro-note p + p { margin-top: 14px; }
+
+  /* ---------- Pieces ---------- */
+  main {
+    padding: 40px 0 120px;
+  }
+
+  .piece {
+    position: relative;
+    padding: 48px 0 48px 34px;
+    border-top: 1px solid var(--rule);
+  }
+
+  .piece:first-child { border-top: none; padding-top: 8px; }
+
+  .register-mark {
+    position: absolute;
+    left: 0;
+    top: 54px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .piece:first-child .register-mark { top: 14px; }
+
+  .register-mark svg { width: 100%; height: 100%; }
+
+  .register-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--editorial-red);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .piece h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 600;
+    font-size: 1.55rem;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+
+  .piece .context {
+    color: var(--ink-soft);
+    font-size: 0.98rem;
+    margin-bottom: 20px;
+    max-width: 58ch;
+  }
+
+  .piece .context em { font-style: italic; color: var(--ink); }
+
+  .artifact {
+    margin-bottom: 20px;
+  }
+
+  .artifact img {
+    max-width: 380px;
+    width: 100%;
+    display: block;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+
+  .artifact-frame {
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    overflow: hidden;
+    background: #000;
+    max-width: 560px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .artifact-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+
+  .piece-link {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--editorial-red);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 1px solid transparent;
+  }
+
+  .piece-link:hover { border-bottom-color: var(--editorial-red); }
+
+  .piece-link::after { content: "→"; transition: transform 0.15s ease; }
+  .piece-link:hover::after { transform: translateX(3px); }
+
+  /* ---------- Footer ---------- */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 48px 0 80px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+  }
+
+  footer a { color: var(--ink-soft); }
+
+  @media (max-width: 600px) {
+    header { padding: 64px 0 48px; }
+    .piece { padding-left: 26px; }
+    .register-mark { width: 16px; height: 16px; top: 50px; }
+    .piece:first-child .register-mark { top: 12px; }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .piece-link::after { transition: none; }
+  }
+
+  /* Focus visibility */
+  a:focus-visible {
+    outline: 2px solid var(--editorial-red);
+    outline-offset: 3px;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Editorial &amp; Communications Strategist</span>
+    <h1>Greg Greene</h1>
+    <p class="lede">Twenty years of finding, asserting, and protecting institutional voice — for a president's first year in office, for the country's largest reproductive health-care provider, and in my own byline when the moment called for it.</p>
+    <p class="lede">This page collects six pieces of that work, each labeled by the register it was written in.</p>
+    <div class="contact-row">
+      <a href="mailto:ggreene@gmail.com">ggreene@gmail.com</a>
+      <span>Los Angeles, Calif.</span>
+      <a href="https://bsky.app/profile/greene.haus" target="_blank" rel="noopener">@greene.haus</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1. American Interregnum — Own Voice -->
+    <div class="piece">
+      <div class="register-mark">
+        <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#B23A2E" stroke-width="1.4"/><circle cx="10" cy="10" r="2" fill="#B23A2E"/></svg>
+      </div>
+      <span class="register-label">Register: My Own Byline</span>
+      <h2>American Interregnum</h2>
+      <p class="context">A pop-up newsletter covering the 2020–21 presidential transition, co-written and edited with Justin Hendrix (now editor of Tech Policy Press) and Melissa Ryan. Issues under my own byline are mine alone; the archive as a whole also reflects my work as copy, managing, and content editor across the run.</p>
+      <a class="piece-link" href="https://americaninterregnum.substack.com/archive" target="_blank" rel="noopener">Read the full archive</a>
+    </div>
+
+    <!-- 2. Disinformation Decoder — Institutional Voice / Persuasion -->
+    <div class="piece">
+      <div class="register-mark">
+        <svg viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" stroke="#B23A2E" stroke-width="1.4"/><line x1="3" y1="10" x2="17" y2="10" stroke="#B23A2E" stroke-width="1.4"/></svg>
+      </div>
+      <span class="register-label">Register: Institutional Voice, Sustained</span>
+      <h2>Disinformation Decoder</h2>
+      <p class="context">Developed at Planned Parenthood Action Fund to identify and rebut deceptive rhetoric in anti-abortion messaging — term by term, from "abortifacient" to "unborn baby." A reference resource built to hold a consistent standard of precision across dozens of entries.</p>
+      <p class="context"><em>Production note:</em> Completed and mapped for publication; the organization underwent a round of layoffs, including mine, before it went live. What's linked here is the final draft as prepared for web.</p>
+      <a class="piece-link" href="assets/disinformation-decoder.pdf" target="_blank" rel="noopener">View the draft (PDF)</a>
+    </div>
+
+    <!-- 3. PPAF Voting Rights + Federal Courts — Digital Editorial -->
+    <div class="piece">
+      <div class="register-mark">
+        <svg viewBox="0 0 20 20" fill="none"><path d="M4 4H16V16H4V4Z" stroke="#B23A2E" stroke-width="1.4"/><path d="M4 8H16" stroke="#B23A2E" stroke-width="1.4"/></svg>
+      </div>
+      <span class="register-label">Register: Digital Editorial &amp; Design</span>
+      <h2>Issue Pages, Planned Parenthood Action Fund</h2>
+      <p class="context">Long-form issue explainers built to translate legal and legislative complexity — voter suppression, judicial nominations — into pages a general reader could act on. I directed digital content strategy across pages like these, working with the editorial, political, and creative teams to keep tone and structure consistent site-wide.</p>
+      <a class="piece-link" href="https://www.plannedparenthoodaction.org/issues/voting-rights" target="_blank" rel="noopener">Voting Rights</a>
+      <br><br>
+      <a class="piece-link" href="https://web.archive.org/web/20201024071143/plannedparenthoodaction.org/issues/trump-judicial-nominations" target="_blank" rel="noopener">Federal Courts (archived)</a>
+    </div>
+
+    <!-- 4. Cecile Richards tweet — Advocacy Wit -->
+    <div class="piece">
+      <div class="register-mark">
+        <svg viewBox="0 0 20 20" fill="none"><path d="M10 3L12 8L17 8.5L13 12L14.5 17L10 14L5.5 17L7 12L3 8.5L8 8L10 3Z" stroke="#B23A2E" stroke-width="1.2" stroke-linejoin="round"/></svg>
+      </div>
+      <span class="register-label">Register: Advocacy Wit, Compressed</span>
+      <h2>"Women's health experts in action."</h2>
+      <p class="context">Written for Cecile Richards, then-president of Planned Parenthood Action Fund, paired with a photo of the all-male House GOP taking a victory lap after passing legislation to gut reproductive health coverage. Seven words, no argument spelled out — the image and the caption do the whole job.</p>
+      <div class="artifact">
+        <img src="assets/cecile-richards.png" alt="Tweet from Cecile Richards reading 'Women's health experts in action,' above a photo of an all-male group of House Republican leaders including Trump, Pence, and Ryan at a bill-signing event, with an MSNBC breaking news banner reading 'Trump, GOP Leaders Take Victory Lap After Trumpcare Narrowly Passes House.'" loading="lazy">
+      </div>
+    </div>
+
+    <!-- 5. PPAF video — Narrative Video -->
+    <div class="piece">
+      <div class="register-mark">
+        <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#B23A2E" stroke-width="1.4"/><path d="M8 7L13 10L8 13V7Z" fill="#B23A2E"/></svg>
+      </div>
+      <span class="register-label">Register: Narrative Video</span>
+      <h2>Can You Hear Us Now? Voicemails to Congress</h2>
+      <p class="context">Built from a repository of thousands of constituent voicemails to Congress. I used voice-to-text AI to surface the strongest patient testimony, developed the narrative framework and script, and partnered with video editors on the final motion graphic — which anchored a campaign to mobilize voters against congressional efforts to block patients' access to care.</p>
+      <div class="artifact-frame">
+        <iframe src="https://www.youtube.com/embed/Y-Sms_BpGgQ" title="Can You Hear Us Now? Voicemails to Congress" loading="lazy" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- 6. Obama tweet — Presidential Voice -->
+    <div class="piece">
+      <div class="register-mark">
+        <svg viewBox="0 0 20 20" fill="none"><path d="M10 2L11.5 7.5L17 6L13.5 10L17 14L11.5 12.5L10 18L8.5 12.5L3 14L6.5 10L3 6L8.5 7.5L10 2Z" stroke="#B23A2E" stroke-width="1.2" stroke-linejoin="round"/></svg>
+      </div>
+      <span class="register-label">Register: Presidential Voice</span>
+      <h2>"Humbled."</h2>
+      <p class="context">The first tweet I wrote for President Obama's personal account, October 2009 — a one-word response to that year's Nobel Peace Prize announcement. I stewarded the account for the first year of his presidency, maintaining a voice that wasn't mine while building processes that allowed for quick, careful action during fast-moving news.</p>
+      <div class="artifact">
+        <img src="assets/humbled.png" alt="Archived Twitter page for @BarackObama showing a single tweet reading 'Humbled.' posted 8:31 AM Oct 9th, 2009, with a footer noting the account was run by Organizing for America, a project of the Democratic National Committee." loading="lazy">
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Greg Greene · Los Angeles, Calif. · ggreene@gmail.com</p>
+  </footer>
+</div>
+
+</body>
+</html>
