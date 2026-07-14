@@ -231,13 +231,6 @@
   }
 </style>
 </head>
-<script>
-  document.querySelectorAll('.js-email').forEach(function (el) {
-    var addr = el.dataset.u + '@' + el.dataset.d;
-    if (el.tagName === 'A') el.href = 'mailto:' + addr;
-    el.textContent = addr;
-  });
-</script>
   
 <body>
 
@@ -336,6 +329,14 @@
     <p>Greg Greene · Los Angeles, Calif. · <a class="js-email" data-u="ggreene" data-d="gmail.com">Email</a></p>
   </footer>
 </div>
+
+<script>
+  document.querySelectorAll('.js-email').forEach(function (el) {
+    var addr = el.dataset.u + '@' + el.dataset.d;
+    if (el.tagName === 'A') el.href = 'mailto:' + addr;
+    el.textContent = addr;
+  });
+</script>
 
 </body>
 </html>
