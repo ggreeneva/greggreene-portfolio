@@ -231,6 +231,14 @@
   }
 </style>
 </head>
+<script>
+  document.querySelectorAll('.js-email').forEach(function (el) {
+    var addr = el.dataset.u + '@' + el.dataset.d;
+    if (el.tagName === 'A') el.href = 'mailto:' + addr;
+    el.textContent = addr;
+  });
+</script>
+  
 <body>
 
 <div class="wrap">
@@ -240,7 +248,7 @@
     <p class="lede">Twenty years of finding, asserting, and protecting institutional voice — for a president's first year in office, for the country's largest reproductive health-care provider, and in my own byline when the moment called for it.</p>
     <p class="lede">This page collects six pieces of that work, each labeled by the register it was written in.</p>
     <div class="contact-row">
-      <a href="mailto:ggreene@gmail.com">ggreene@gmail.com</a>
+    <a class="js-email" data-u="ggreene" data-d="gmail.com" href="#">Email</a>
       <span>Los Angeles, Calif.</span>
       <a href="https://bsky.app/profile/greene.haus" target="_blank" rel="noopener">@greene.haus</a>
     </div>
@@ -326,7 +334,7 @@
   </main>
 
   <footer>
-    <p>Greg Greene · Los Angeles, Calif. · ggreene@gmail.com</p>
+    <p>Greg Greene · Los Angeles, Calif. · <span class="js-email" data-u="ggreene" data-d="gmail.com">Email</span></p>
   </footer>
 </div>
 
